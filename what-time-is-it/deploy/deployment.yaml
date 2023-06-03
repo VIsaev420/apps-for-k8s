@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: what-time-is-it-d
+  labels:
+    app: what-time-is-it
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: what-time-is-it
+  template:
+    metadata:
+      labels:
+        app: what-time-is-it
+    spec:
+      containers:
+        - name: what-time-is-it
+          image: what-time-is-it:0.1.1
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              cpu: '1'
+              memory: 900Mi
+            requests:
+              cpu: '0.5'
+              memory: 450Mi

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: what-time-is-it
+  labels:
+    app: what-time-is-it
+spec:
+  selector:
+    app: what-time-is-it
+  ports:
+    - name: 8080-tcp
+      port: 8080
+      protocol: TCP
+      targetPort: 8080

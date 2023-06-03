@@ -1,0 +1,5 @@
+### hello
+GET localhost:8080/hello
+
+### wat
+GET localhost:8080/what-time-is-it
